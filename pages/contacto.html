@@ -21,7 +21,7 @@
         <!-- logo de la marca -->
         <a href="../index.html"><img src="../img/logo/fc-logo-no-background.png" alt="Logo de la marca"></a>
         <!-- menu de navegacion bootstrap -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -47,55 +47,44 @@
         <section class="section-contacto">
             <!-- datos de contacto con texto e iconos -->
             <div>
-                <img src="../img/icons/icon-whatsapp.png" alt="Icono Whatsapp">
-                <p>+54 9 11 2345 6789</p>
-            </div>
-            <div class="email">
-                <img src="../img/icons/icon-email.png" alt="Icono Email">
-                <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
-            </div>
-            <div>
-                <img src="../img/icons/icon-schedule.png" alt="Icono Agenda">
-                <p>Lunes a Viernes</p>
-                <p>9 a 18 horas</p>
+                <ul>
+                    <li>
+                        <img src="../img/icons/icon-whatsapp.png" alt="Icono Whatsapp">
+                        <p>+54 9 11 2345 6789</p>
+                    </li>
+                    <li>
+                        <a href="mailto:mail@mail.com"><img src="../img/icons/icon-email.png" alt="Icono Email"></a>
+                        <p>mail@mail.com</p>
+                    </li>
+                    <li>
+                        <img src="../img/icons/icon-schedule.png" alt="Icono Agenda">
+                        <p>Lunes a Viernes de 9 a 18 horas</p>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section-formulario">
             <!-- formulario -->
             <div>
-                <form action="" method="post">
-                    <fieldset>
-                        <legend>DEJANOS TU CONSULTA</legend>
-                        <!-- campo para nombre -->
-                        <div>
-                            <label for="nombre-completo">Nombre y Apellido:</label>
-                            <input type="text" name="nombre-completo" id="nombre-completo" required>
-                        </div>
-                        <!-- campo para correo -->
-                         <div>
-                            <label for="correo">Correo Electrónico:</label>
-                            <input type="email" name="correo" id="correo" required>
-                        </div>
-                        <!-- campo para telefono -->
-                        <div>
-                            <label for="telefono">Número de Teléfono:</label>
-                            <input type="tel" name="telefono" id="telefono">
-                        </div>
-                        <!-- campo para fecha del evento -->
-                        <div>
-                            <label for="fecha">Fecha del Evento:</label>
-                            <input type="date" name="fecha" id="fecha">
-                        </div>
-                        <!-- campo para comentarios -->
-                        <div>
-                            <label for="comentarios">Comentarios:</label>
-                            <textarea name="comentarios" id="comentarios" rows="3" cols="40" required></textarea>
-                        </div>
-                        <!-- boton para enviar datos -->
-                        <div>
-                            <input class="input-enviar" type="submit" value="Enviar">
-                        </div>
-                    </fieldset>
+                <form class="form" method="post">
+                    <legend>DEJANOS TU CONSULTA</legend>
+                    <div class="group">
+                        <input placeholder="" type="text"  id="nombre-completo" name="nombre-completo" required>
+                        <label for="nombre-completo">Nombre y Apellido</label>
+                    </div>
+                    <div class="group">
+                        <input placeholder="" type="email" id="email" name="email" required>
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                    <div class="group">
+                        <input placeholder="" type="tel" id="telefono" name="telefono" required>
+                        <label for="telefono">Número de Teléfono</label>
+                    </div>
+                    <div class="group">
+                        <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+                        <label for="comment">Comentarios</label>
+                    </div>
+                    <button type="submit">ENVIAR</button>
                 </form>
             </div>
         </section>

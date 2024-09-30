@@ -50,6 +50,7 @@ main{
 
 main div img{
     width: 100%;
+    height: 100vh;
 }
 
 main div .banner-mobile{
@@ -80,49 +81,127 @@ main div .titulo .h2-index{
 }
  
 main .descripcion{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: 80%;
     gap: 30px;
-    padding: 30px;
-    margin: 0px 30px;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
  
 main .descripcion p{
-    font-size: 150%;
+    font-size: 125%;
 }
 
 main .h1-not-index{
     display: none;
 }
 
-main div .h2-nosotros{
-    margin: 30px;
-    font-size: 250%;
+main .fondo-nosotros{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
-main .main-nosotros section{
-    margin: 0px 50px;
-    padding: 10px;
+main .main-nosotros .flip-card-uno{
+    background-color: transparent;
+    width: 80%;
+    height: 25%;
+    perspective: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+main .main-nosotros div div div .title{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+  
+main .main-nosotros div .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+main .main-nosotros .flip-card-uno:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+main .main-nosotros div .flip-card-front, .flip-card-back{
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #76c9ba;
+    border-radius: 1rem;
+  }
+
+main .main-nosotros div .flip-card-inner .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
 }
 
-main div section .descripcion-nosotros-1{
-    padding: 20px;
-    width: 60%;
-    text-align: left;
-    align-content: center;
+main .main-nosotros .flip-card-dos{
+    background-color: transparent;
+    width: 80%;
+    height: 25%;
+    perspective: 1000px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+  
+main .main-nosotros div div div .title{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+  
+main .main-nosotros div .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+main .main-nosotros .flip-card-dos:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
-main div section .descripcion-nosotros-2{
-    padding: 20px;
-    width: 60%;
-    text-align: right;
-    align-content: center;
+main .main-nosotros div .flip-card-front, .flip-card-back{
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #76c9ba;
+    border-radius: 1rem;
+  }
+
+main .main-nosotros div .flip-card-inner .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
 }
 
 main .servicios div{
@@ -131,6 +210,11 @@ main .servicios div{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
+}
+
+.servicios div fieldset:hover {
+  box-shadow: 0px 0px 20px 1px #76c9ba;
+  border: 3px solid #76c9ba;
 }
 
 main .servicios fieldset{
@@ -204,81 +288,140 @@ main .section-carousel{
 }
 
 .main-contacto{
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 main .fondo-contacto{
     width: 100%;
+    height: 100vh;
     position: absolute;
+    object-fit: cover;
+    overflow: hidden;
     left: 0;
 }
 
-main .section-contacto, .section-formulario{
-    position: relative;
+main .section-contacto div ul{
+    padding: 50px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
     align-items: center;
 }
 
-main .section-contacto{
-    padding: 20px;
-    font-size: 60%;
-    display: flex;
-    justify-content: space-around;
+main .section-contacto div ul li{
+    list-style: none;
+    position: relative;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-main .section-contacto div{
-    margin: 50px;
+main .section-contacto div ul li img{
+    height: 50px;
+    width: auto;
 }
 
-main .section-contacto div img{
-    width: 50%;
+main .section-contacto div ul li p{
+    display: none;
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    padding: 0px 5px;
+    z-index: 1;
+    white-space: nowrap;
 }
 
-main .section-contacto div p{
-    padding: 10px;
-    color: white;
-    font-size: medium;
+main .section-contacto div ul li:hover p{
+    display: block;
+    pointer-events: auto;
+}
+
+main .section-contacto div ul li:hover{
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+main .section-formulario{
+    position: relative;
 }
 
 main .section-formulario div form{
     padding: 0% 25%;
     margin-bottom: 10%;
     margin-top: -5%;
-}
-
-main .section-formulario div form fieldset{
-    height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    border: 2px solid white;
 }
-
-main .section-formulario div form fieldset legend{
-    font-size: 300%;
+ 
+main .section-formulario div form legend{
+    font-weight: 600;
 }
-
-main .section-formulario div form fieldset div{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  
+main .section-formulario div form div{
+    position: relative;
 }
-
-main .section-formulario div form fieldset div label{
-    font-size: 150%;
-}
-
-main .section-formulario div form fieldset div .input-enviar{
-    font-size: 175%;
-    width: 50%;
-    background-color: black;
+  
+main .section-formulario div form div label{
+    font-size: 14px;
     color: white;
-    border: 2px solid white;
-    border-radius: 25px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: transparent;
+    transition: all .3s ease;
 }
-
-main section .email p a{
+  
+main .section-formulario div form div input,
+main .section-formulario div form div textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    outline: 0;
+    width: 100%;
+    background-color: transparent;
     color: white;
+}
+  
+main .section-formulario div form div input:placeholder-shown+ label, main .section-formulario div form div textarea:placeholder-shown +label{
+    top: 10px;
+    background-color: transparent;
+}
+  
+main .section-formulario div form div input:focus, main .section-formulario div form div textarea:focus{
+    border-color: #76c9ba;
+}
+  
+main .section-formulario div form div input:focus+ label, main .section-formulario div form div textarea:focus +label{
+    top: -10px;
+    left: 10px;
+    background-color: transparent;
+    color: #76c9ba;
+    font-weight: 600;
+    font-size: 14px;
+}
+  
+main .section-formulario div form div textarea{
+    resize: none;
+    height: 100px;
+}
+  
+main .section-formulario div form button{
+    background-color: #76c9ba;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+main .section-formulario div form button:hover {
+    background-color: #4c9f90;
 }
 
 /* estilos especificos footer */
@@ -288,15 +431,16 @@ footer{
     border-top: 1px solid rgb(39, 38, 38);
     color: white;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 footer div h3{
-    font-size: medium;
+    font-size: small;
 }
 
 footer div div a img{
-    width: 25px;
-    height: auto;
+    width: 2%;
 }
 
 /* estilos especificos mobile */
@@ -321,12 +465,27 @@ footer div div a img{
 
     main .descripcion{
         gap: 10px;
-        padding: 10px;
-        margin: 0px 20px;
+        top: 90%;
     }
      
     main .descripcion p{
-        font-size: 100%;
+        font-size: 80%;
+    }
+
+    main .main-nosotros .flip-card-uno{
+        top: 40%;
+    }
+
+    main .main-nosotros .flip-card-dos{
+        top: 90%;
+    }
+
+    main .main-nosotros .flip-card-uno, main .main-nosotros .flip-card-dos{
+        height: 40%;
+    }
+
+    main .main-nosotros .flip-card-uno div div p, main .main-nosotros .flip-card-dos div div p{
+        font-size: small;
     }
 
     main .servicios div{
@@ -357,6 +516,26 @@ footer div div a img{
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    .main-contacto{
+        gap: 0px;
+    }
+
+    main .fondo-contacto{
+        height: 90vh;
+    }
+    
+    main .section-contacto div ul{
+        gap: 50px;
+    }
+    
+    main .section-contacto div ul li img{
+        height: 40px;
+    }
+    
+    main .section-formulario div form{
+        padding: 0% 10%;
     }
 
     footer div h3{
