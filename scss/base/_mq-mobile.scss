@@ -1,0 +1,137 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* estilos especificos mobile */
+
+@media (max-width: 480px){
+    
+    /* estilos main */
+
+    /* estilos index */
+    main{
+        div{
+            .banner{
+                display: none;
+            }
+            .banner-mobile{
+                display: block;
+            }
+            .titulo{
+                top: 30%;
+                .h1-index{
+                    font-size: 250%;
+                }
+                .h2-index{
+                    font-size: 150%;
+                }
+            }
+        }
+        .descripcion{
+            top: 75%;
+            p{
+                font-size: 80%;
+            }
+        }
+    }
+
+    /* estilos nosotros */
+    main{
+        .main-nosotros{
+            .flip-card-uno{
+                top: 40%;
+            }
+            .flip-card-dos{
+                top: 90%;
+            }
+            .flip-card-uno, .flip-card-dos{
+                height: 40%;
+                div{
+                    div{
+                        p{
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* estilos servicios */
+    main{
+        .servicios{
+            div{
+                display: flex;
+                flex-direction: column;
+                margin: 0px;
+            }
+        }
+    }
+
+    /* estilos galeria */
+    main{
+        .section-galeria{
+            display: none;
+        }
+        .section-carousel{
+            display: contents;
+            div{
+                div{
+                    div{
+                        height: 50vh;
+                        @include position-relative;
+                        img{
+                            margin: 0.5rem 0px;
+                            @include size-variable(100%, 100%);
+                            object-fit: cover;
+                            @include position-absolute(0, 0, none);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* estilos contacto */
+    .main-contacto{
+        gap: 0px;
+        .section-contacto{
+            div{
+                ul{
+                    gap: 50px;
+                    li{
+                        img{
+                            height: 40px;
+                        }
+                        p{
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+        .section-formulario{
+            div{
+                form{
+                    padding: 0% 10%;
+                }
+            }
+        }
+    }
+    
+    /* estilos footer */
+    footer{
+        div{
+            h3{
+                font-size: small;
+            }
+            div{
+                a{
+                    img{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

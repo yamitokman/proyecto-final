@@ -1,0 +1,109 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* estilos especificos tablet */
+@media (min-width: 480px) and (max-width: 1023px){
+    
+    /* estilos main */
+    /* estilos index */
+    main{
+        div{
+            .banner{
+                display: none;
+            }
+            .banner-mobile{
+                display: block;
+            }
+            .titulo{
+                top: 40%;
+            }
+        }
+        .descripcion{
+            gap: 10px;
+            top: 75%; 
+        }
+    }
+    /* estilos nosotros */
+    main{
+        .main-nosotros{
+            .flip-card-uno{
+                top: 35%;
+            }
+            .flip-card-dos{
+                top: 85%;
+            }
+            .flip-card-uno, .flip-card-dos{
+                height: 40%;
+                div{
+                    div{
+                        h2{
+                            font-size: 400%;
+                        }
+                        p{
+                            font-size: x-large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /* estilos servicios */
+    main{
+        .servicios{
+            div{
+                margin: 0px;
+                padding: 0.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+        }
+    }
+    
+    /* estilos galeria */
+    main{
+        .section-galeria{
+            display: none;
+        }
+        .section-carousel{
+            display: contents;
+            div{
+                div{
+                    div{
+                        height: 50vh;
+                        @include position-relative;
+                        img{
+                            margin: 0.5rem 0px;
+                            @include size-variable(100%, 100%);
+                            object-fit: cover; 
+                            @include position-absolute(0, 0, none);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* estilos contacto */
+    main{
+        .section-formulario{
+            div{
+                form{
+                    padding: 0% 10%;
+                    gap: 10px;
+                }
+            }
+        }
+        .fondo-contacto{
+            @include size-variable(100%, 100vh);
+            @include position-absolute(0, 0, none);
+            object-fit: cover;
+            overflow: hidden;
+            z-index: -1;
+        }
+    }
+}
+
