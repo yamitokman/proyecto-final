@@ -297,7 +297,7 @@ main .section-carousel{
 .main-contacto{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
