@@ -31,6 +31,11 @@ header a img{
     height: 5rem;
 }
 
+header nav{
+    z-index: 1;
+    min-height: 5rem;
+}
+
 header nav div div div .nav-link:active{
     font-weight: bold;
 }
@@ -51,6 +56,7 @@ main{
 main div img{
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 main div .banner-mobile{
@@ -210,6 +216,7 @@ main .servicios div{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
+    margin: 0px 50px;
 }
 
 .servicios div fieldset:hover {
@@ -291,15 +298,21 @@ main .section-carousel{
     display: flex;
     flex-direction: column;
     gap: 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: transparent;
 }
 
 main .fondo-contacto{
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     position: absolute;
     object-fit: cover;
     overflow: hidden;
+    top: 0;
     left: 0;
+    z-index: -1;
 }
 
 main .section-contacto div ul{
@@ -455,6 +468,10 @@ footer div div a img{
         display: block;
     }
 
+    main div .titulo{
+        top: 30%;
+    }
+
     main div .titulo .h1-index{
         font-size: 250%;
     }
@@ -464,8 +481,7 @@ footer div div a img{
     }
 
     main .descripcion{
-        gap: 10px;
-        top: 90%;
+        top: 75%;
     }
      
     main .descripcion p{
@@ -489,9 +505,9 @@ footer div div a img{
     }
 
     main .servicios div{
-        padding: 0.5rem;
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
     }
 
     main .section-galeria{
@@ -521,10 +537,6 @@ footer div div a img{
     .main-contacto{
         gap: 0px;
     }
-
-    main .fondo-contacto{
-        height: 90vh;
-    }
     
     main .section-contacto div ul{
         gap: 50px;
@@ -533,7 +545,7 @@ footer div div a img{
     main .section-contacto div ul li img{
         height: 40px;
     }
-    
+
     main .section-formulario div form{
         padding: 0% 10%;
     }
@@ -545,4 +557,94 @@ footer div div a img{
     footer div div a img{
         width: 20px;
     }
+}
+
+/* estilos especificos tablet */
+
+@media (min-width: 480px) and (max-width: 1023px){
+    main div .banner{
+        display: none;        
+    }
+
+    main div .banner-mobile{
+        display: block;
+    }
+
+    main div .titulo{
+        top: 40%;
+    }
+
+    main .descripcion{
+        gap: 10px;
+        top: 75%;
+    }
+
+    main .main-nosotros .flip-card-uno{
+        top: 35%;
+    }
+
+    main .main-nosotros .flip-card-dos{
+        top: 85%;
+    }
+
+    main .main-nosotros .flip-card-uno, main .main-nosotros .flip-card-dos{
+        height: 40%;
+    }
+
+    main .main-nosotros .flip-card-uno div div h2, main .main-nosotros .flip-card-dos div div h2{
+        font-size: 400%;
+    }
+
+    main .main-nosotros .flip-card-uno div div p, main .main-nosotros .flip-card-dos div div p{
+        font-size: larger;
+    }
+
+    main .servicios div{
+        margin: 0px;
+        padding: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    main .section-galeria{
+        display: none;
+    }
+
+    main .section-carousel{
+        display: contents;
+    }
+
+    main .section-carousel div div div{
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    main .section-carousel div div div img{
+        margin: 0.5rem 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    main .section-formulario div form{
+        padding: 0% 10%;
+        gap: 10px;
+    }
+
+    main .fondo-contacto{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
 }
