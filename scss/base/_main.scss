@@ -4,6 +4,8 @@
 
 /* estilos especificos del main */
 
+/* estilos index y/o generales */
+
 main{
     @include standard-colors;
     text-align: center;
@@ -33,7 +35,7 @@ main{
             }
         }
     }
-    .description{
+    .descripcion{
         width: 80%;
         gap: 30px;
         text-align: center;
@@ -42,14 +44,281 @@ main{
             font-size: 125%;
         }
     }
-}
-
-main{
     .h1-not-index{
         display: none;
     }
+}
+
+/* estilos nosotros */
+
+main{
     .fondo-nosotros{
         @include standard-img-size;
         object-fit: cover;
+    }
+    .main-nosotros{
+        .flip-card-uno{
+            background-color: transparent;
+            @include size-variable(80%, 25%);
+            perspective: 1000px;
+            @include position-absolute;
+        }
+        div{
+            .flip-card-inner{
+                position: relative;
+                @include size-variable(100%, 100%);
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+        }
+        .flip-card-uno:hover{
+            .flip-card-inner{
+                transform: rotateY(180deg);
+            }
+        }
+        div{
+            div{
+                .flip-card-front, .flip-card-back{
+                box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+                position: absolute;
+                @include flex-center;
+                @include size-variable(100%, 100%);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border: 1px solid $main-color;
+                border-radius: 1rem;
+                }
+            }
+            .flip-card-inner{
+                .flip-card-back{
+                    color: $text-color;
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+        .flip-card-dos{
+            background-color: transparent;
+            @include size-variable(80%, 25%);
+            perspective: 1000px;
+            @include position-absolute(80%, 50%);
+        }
+        .flip-card-dos:hover{
+            .flip-card-inner{
+                transform: rotateY(180deg);
+            }
+        }
+        div{
+            div{
+                div{
+                    .title{
+                        font-size: 1.5rem;
+                        font-weight: 900;
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* estilos servicios */
+
+main{
+    .servicios{
+        div{
+            padding: 1rem;
+            @include display-grid(repeat(3, 1fr), repeat(2,auto));
+            gap: 1rem;
+            margin: 0px 50px;
+            fieldset:hover{
+                box-shadow: $hover-shadow;
+                border: 3px solid $main-color;
+            }
+            fieldset{
+                border: 2px solid $border-color;
+                padding: 0;
+                @include position-relative;
+                display: flex;
+                legend{
+                    padding: 0.5rem 1rem;
+                    color: $text-color;
+                    font-size: 200%;
+                    font-weight: bold;
+                    position: absolute;
+                    text-align: center;
+                    z-index: 1;
+                }
+                p{
+                    padding: 40% 10% 0% 10%;
+                    color: $text-color;
+                    font-size: 120%;
+                    position: absolute;
+                    text-align: center;
+                    z-index: 1;
+                }
+                img{
+                    @include size-variable(100%, auto);
+                }
+            }
+        }
+    }
+}
+
+/* estilos galeria */
+
+main{
+    .section-galeria{
+        padding: 10px 0px;
+        div{
+            @extend .section-galeria;
+            fieldset{
+                height: 350px;
+                border: 2px solid $border-color;
+                padding: 0;
+                @include position-relative;
+                legend{
+                    margin: 0px 20px;
+                    text-align: left;
+                    font-size: larger;
+                    font-weight: bolder;
+                    position: absolute;
+                    z-index: 1;
+                }
+                img{
+                    margin: 0px;
+                    @include size-variable(33%, 350px);
+                    display: inline-block;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+    .section-carousel{
+        display: none;
+    }
+}
+
+/* estilos contacto */
+
+.main-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    @include position-relative;
+    min-height: 100vh;
+    background-color: transparent;
+    .fondo-contacto{
+        @include size-variable(100%, 200vh);
+        position: absolute;
+        object-fit: cover;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .section-contacto{
+        div{
+            ul{
+                padding: 50px;
+                @include flex-center;
+                gap: 80px;
+                li{
+                    list-style: none;
+                    position: relative;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    img{
+                        @include size-variable(auto, 50px);
+                    }
+                    p{
+                        display: none;
+                        @include position-absolute(80%, 50%, translateX(-50%));
+                        background: transparent;
+                        padding: 0px 5px;
+                        z-index: 1;
+                        white-space: nowrap;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        pointer-events: auto;
+                        p{
+                        display: block;
+                        pointer-events: auto;
+                        padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-formulario{
+        position: relative;
+        div{
+            form{
+                padding: 0% 25%;
+                margin-bottom: 10%;
+                margin-top: -5%;
+                display: flex;
+                flex-direction: column;
+                legend{
+                    font-weight: 600;
+                }
+                div{
+                    position: relative;
+                    label{
+                        font-size: 14px;
+                        color: $text-color;
+                        @include position-absolute(-10px, 10px, none);
+                        background-color: transparent;
+                        transition: all .3s ease;
+                    }
+                    input, textarea{
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid $border-color;
+                        margin-bottom: 20px;
+                        outline: 0;
+                        width: 100%;
+                        background-color: transparent;
+                        color: $text-color;
+                        &:placeholder-shown + label{
+                            top: 10px;
+                            background-color: transparent;
+                        }
+                        &:focus{
+                            border-color: $main-color;
+                            + label{
+                                top: -10px;
+                                left: 10px;
+                                background-color: transparent;
+                                color: $main-color;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    textarea{
+                        min-height: 50px;
+                        height: 100px;
+                    }
+                }
+                button{
+                    background-color: $main-color;
+                    color: black;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: $main-color-dark;
+                    }
+                }
+            }
+        }
     }
 }

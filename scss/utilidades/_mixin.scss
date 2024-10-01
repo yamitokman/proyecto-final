@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+@mixin display-grid($columns, $rows){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
 @mixin standard-colors{
     background-color: $background-color;
     color: $text-color;
@@ -14,18 +20,19 @@
     height: 100vh;
 }
 
-@mixin position-absolute ($top: 50%, $left: 50%){
+@mixin size-variable($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin position-absolute ($top: 50%, $left: 50%, $translate: translate(-50%, -50%)){
     position: absolute;
     top: $top;
     left: $left;
-    transform: translate(-50%, -50%);
+    transform: $translate;
 }
 
 @mixin position-relative{
     position: relative;
     overflow: hidden;
-}
-
-@mixin transition($properties, $duration){
-    transition: $properties, $duration;
 }
