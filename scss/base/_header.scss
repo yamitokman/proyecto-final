@@ -1,0 +1,33 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* estilos especificos del header */
+
+header{
+    background-color: white;
+    @include flex-center(space-between);
+    a{
+        img{
+            margin: 0.5rem 1rem;
+            height: 5rem;
+        }
+    }
+    nav{
+        z-index: 1;
+        min-height: 5rem;
+        div{
+            div{
+                div{
+                    .nav-link:active{
+                        font-weight: bold;
+                    }
+                    .nav-link:hover{
+                        color: $main-color;
+                        border-bottom: 2px solid $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

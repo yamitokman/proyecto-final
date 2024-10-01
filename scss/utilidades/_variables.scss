@@ -1,2 +1,17 @@
 //color principal
-$color-principal: #76c9ba;
+$main-color: #76c9ba;
+
+//color principal mas oscuro para hover
+$main-color-dark: #4c9f90;
+
+//color de fondo
+$background-color: black;
+
+//color de texto
+$text-color: white;
+
+//sombra del hover
+$hover-shadow: 0px 0px 20px 1px $main-color;
+
+//color del borde
+$border-color: white;

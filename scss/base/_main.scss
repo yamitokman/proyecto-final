@@ -1,0 +1,55 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* estilos especificos del main */
+
+main{
+    @include standard-colors;
+    text-align: center;
+    div{
+        img{
+            @include standard-img-size;
+            position: relative;
+        }
+        .banner-mobile{
+            display: none;
+        }
+        .titulo{
+            background-color: transparent;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-top: 2px solid $text-color;
+            border-bottom: 2px solid $text-color;
+            text-align: center;
+            @include position-absolute;
+            .h1-index{
+                font-size: 350%;
+            }
+            .h2-index{
+                font-size: 200%;
+                font-style: italic;
+                letter-spacing: 8px;
+            }
+        }
+    }
+    .description{
+        width: 80%;
+        gap: 30px;
+        text-align: center;
+        @include position-absolute(95%);
+        p{
+            font-size: 125%;
+        }
+    }
+}
+
+main{
+    .h1-not-index{
+        display: none;
+    }
+    .fondo-nosotros{
+        @include standard-img-size;
+        object-fit: cover;
+    }
+}

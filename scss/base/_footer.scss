@@ -1,0 +1,24 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* estilos especificos footer */
+footer{
+    @include standard-colors;
+    border-top: 1px solid rgb(39, 38, 38);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    div{
+        h3{
+            font-size: small;
+        }
+        div{
+            a{
+                img{
+                    width: 2%;
+                }
+            }
+        }
+    }
+}
