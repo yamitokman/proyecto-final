@@ -27,7 +27,7 @@ main{
             @include position-absolute;
             .h1-index{
                 font-size: 350%;
-            }
+                }
             .h2-index{
                 font-size: 200%;
                 font-style: italic;
@@ -41,7 +41,7 @@ main{
         text-align: center;
         @include position-absolute(95%);
         p{
-            font-size: 125%;
+            font-size: 110%;
         }
     }
     .h1-not-index{
@@ -75,6 +75,8 @@ main{
         .flip-card-uno:hover{
             .flip-card-inner{
                 transform: rotateY(180deg);
+                box-shadow: $hover-shadow;
+                border-radius: 1rem;
             }
         }
         div{
@@ -106,13 +108,15 @@ main{
         .flip-card-dos:hover{
             .flip-card-inner{
                 transform: rotateY(180deg);
+                box-shadow: $hover-shadow;
+                border-radius: 1rem;
             }
         }
         div{
             div{
                 div{
                     .title{
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                         font-weight: 900;
                         text-align: center;
                         margin: 0;
@@ -177,6 +181,7 @@ main{
                 height: 350px;
                 border: 2px solid $border-color;
                 padding: 0;
+                margin: 10px 0px;
                 @include position-relative;
                 legend{
                     margin: 0px 20px;
@@ -316,6 +321,7 @@ main{
                     transition: all 0.3s ease;
                     &:hover{
                         background-color: $main-color-dark;
+                        box-shadow: $hover-shadow;
                     }
                 }
             }

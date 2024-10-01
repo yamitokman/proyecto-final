@@ -87,7 +87,7 @@ main .descripcion {
   transform: translate(-50%, -50%);
 }
 main .descripcion p {
-  font-size: 125%;
+  font-size: 110%;
 }
 main .h1-not-index {
   display: none;
@@ -120,6 +120,8 @@ main .main-nosotros div .flip-card-inner {
 }
 main .main-nosotros .flip-card-uno:hover .flip-card-inner {
   transform: rotateY(180deg);
+  box-shadow: 0px 0px 20px 1px #76c9ba;
+  border-radius: 1rem;
 }
 main .main-nosotros div div .flip-card-front, main .main-nosotros div div .flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -149,9 +151,11 @@ main .main-nosotros .flip-card-dos {
 }
 main .main-nosotros .flip-card-dos:hover .flip-card-inner {
   transform: rotateY(180deg);
+  box-shadow: 0px 0px 20px 1px #76c9ba;
+  border-radius: 1rem;
 }
 main .main-nosotros div div div .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 900;
   text-align: center;
   margin: 0;
@@ -207,6 +211,7 @@ main .section-galeria div fieldset {
   height: 350px;
   border: 2px solid white;
   padding: 0;
+  margin: 10px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -361,6 +366,7 @@ main .section-carousel {
 }
 .main-contacto .section-formulario div form button:hover {
   background-color: #4c9f90;
+  box-shadow: 0px 0px 20px 1px #76c9ba;
 }
 
 /* estilos especificos footer */
