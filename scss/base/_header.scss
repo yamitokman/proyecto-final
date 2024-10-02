@@ -5,6 +5,8 @@
 /* estilos especificos del header */
 
 header{
+    position: relative;
+    z-index: 10;
     background-color: white;
     @include flex-center(space-between);
     a{
@@ -14,7 +16,6 @@ header{
         }
     }
     nav{
-        z-index: 1;
         min-height: 5rem;
         div{
             div{

@@ -34,14 +34,14 @@ main{
                 letter-spacing: 8px;
             }
         }
-    }
-    .descripcion{
-        width: 80%;
-        gap: 30px;
-        text-align: center;
-        @include position-absolute(95%);
-        p{
-            font-size: 110%;
+        .descripcion{
+            width: 80%;
+            gap: 30px;
+            text-align: center;
+            @include position-absolute(75%);
+            p{
+                font-size: 110%;
+            }
         }
     }
     .h1-not-index{
@@ -59,7 +59,7 @@ main{
     .main-nosotros{
         .flip-card-uno{
             background-color: transparent;
-            @include size-variable(80%, 25%);
+            @include size-variable(60%, 25%);
             perspective: 1000px;
             @include position-absolute;
         }
@@ -101,7 +101,7 @@ main{
         }
         .flip-card-dos{
             background-color: transparent;
-            @include size-variable(80%, 25%);
+            @include size-variable(60%, 25%);
             perspective: 1000px;
             @include position-absolute(80%, 50%);
         }

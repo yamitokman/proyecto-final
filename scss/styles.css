@@ -21,6 +21,8 @@
 
 /* estilos especificos del header */
 header {
+  position: relative;
+  z-index: 10;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -31,7 +33,6 @@ header a img {
   height: 5rem;
 }
 header nav {
-  z-index: 1;
   min-height: 5rem;
 }
 header nav div div div .nav-link:active {
@@ -77,16 +78,16 @@ main div .titulo .h2-index {
   font-style: italic;
   letter-spacing: 8px;
 }
-main .descripcion {
+main div .descripcion {
   width: 80%;
   gap: 30px;
   text-align: center;
   position: absolute;
-  top: 95%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .descripcion p {
+main div .descripcion p {
   font-size: 110%;
 }
 main .h1-not-index {
@@ -102,7 +103,7 @@ main .fondo-nosotros {
 }
 main .main-nosotros .flip-card-uno {
   background-color: transparent;
-  width: 80%;
+  width: 60%;
   height: 25%;
   perspective: 1000px;
   position: absolute;
@@ -141,7 +142,7 @@ main .main-nosotros div .flip-card-inner .flip-card-back {
 }
 main .main-nosotros .flip-card-dos {
   background-color: transparent;
-  width: 80%;
+  width: 60%;
   height: 25%;
   perspective: 1000px;
   position: absolute;
@@ -404,18 +405,20 @@ footer div div a img {
   main div .titulo .h2-index {
     font-size: 150%;
   }
-  main .descripcion {
-    top: 75%;
+  main div .descripcion {
+    top: 65%;
   }
-  main .descripcion p {
+  main div .descripcion p {
     font-size: 80%;
   }
   /* estilos nosotros */
   main .main-nosotros .flip-card-uno {
     top: 40%;
+    width: 80%;
   }
   main .main-nosotros .flip-card-dos {
     top: 90%;
+    width: 80%;
   }
   main .main-nosotros .flip-card-uno, main .main-nosotros .flip-card-dos {
     height: 40%;
@@ -489,16 +492,18 @@ footer div div a img {
   main div .titulo {
     top: 40%;
   }
-  main .descripcion {
+  main div .descripcion {
     gap: 10px;
-    top: 75%;
+    top: 65%;
   }
   /* estilos nosotros */
   main .main-nosotros .flip-card-uno {
     top: 35%;
+    width: 80%;
   }
   main .main-nosotros .flip-card-dos {
     top: 85%;
+    width: 80%;
   }
   main .main-nosotros .flip-card-uno, main .main-nosotros .flip-card-dos {
     height: 40%;

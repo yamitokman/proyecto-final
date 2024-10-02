@@ -26,11 +26,11 @@
                     font-size: 150%;
                 }
             }
-        }
-        .descripcion{
-            top: 75%;
-            p{
-                font-size: 80%;
+            .descripcion{
+                top: 65%;
+                p{
+                    font-size: 80%;
+                }
             }
         }
     }
@@ -40,9 +40,11 @@
         .main-nosotros{
             .flip-card-uno{
                 top: 40%;
+                width: 80%;
             }
             .flip-card-dos{
                 top: 90%;
+                width: 80%;
             }
             .flip-card-uno, .flip-card-dos{
                 height: 40%;

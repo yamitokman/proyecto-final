@@ -18,10 +18,10 @@
             .titulo{
                 top: 40%;
             }
-        }
-        .descripcion{
-            gap: 10px;
-            top: 75%; 
+            .descripcion{
+                gap: 10px;
+                top: 65%; 
+            }
         }
     }
     /* estilos nosotros */
@@ -29,9 +29,11 @@
         .main-nosotros{
             .flip-card-uno{
                 top: 35%;
+                width: 80%;
             }
             .flip-card-dos{
                 top: 85%;
+                width: 80%;
             }
             .flip-card-uno, .flip-card-dos{
                 height: 40%;
