@@ -3,7 +3,7 @@
 @import "../utilidades/mixin";
 
 /* estilos especificos tablet */
-@media (min-width: 480px) and (max-width: 1023px){
+@media (min-width: 601px) and (max-width: 1200px){
     
     /* estilos main */
     /* estilos index */
@@ -39,12 +39,13 @@
                 height: 40%;
                 div{
                     div{
+                        padding: 0px 10px;
                         h2{
                             font-size: 400%;
-                        }
+                        }         
                         p{
-                            font-size: x-large;
-                        }
+                            font-size: 100%;
+                        }               
                     }
                 }
             }
@@ -107,5 +108,5 @@
             z-index: -1;
         }
     }
-}
 
+}
